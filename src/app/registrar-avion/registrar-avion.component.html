@@ -1,0 +1,50 @@
+<div class="col-md-6 offset-md-3">
+  <h3 class="text-center">Registro de avión</h3>
+  <form (ngSubmit)="guardarAvion()" #avionForm="ngForm">
+    <div class="form-group">
+      <label>Nombre del Avión:</label>
+      <input type="text"
+             class="form-control"
+             id="nombre"
+             [(ngModel)]="avion.nombre_Avion"
+             name="nombre"
+             required
+             minlength="4"
+             maxlength="10"
+             placeholder="Digite el nombre del avión"
+             #nombre="ngModel">
+
+    </div>
+
+    <div class="form-group">
+      <label>Nombre del Modelo:</label>
+      <input type="text"
+             class="form-control"
+             id="modelo"
+             [(ngModel)]="avion.nombre_Modelo"
+             name="modelo"
+             required
+             minlength="4"
+             maxlength="10"
+             placeholder="Digite el nombre del modelo"
+             #modelo="ngModel">
+
+    </div>
+
+    <div class="form-group">
+      <label>Capacidad:</label>
+      <input type="number"
+             class="form-control"
+             id="capacidad"
+             [(ngModel)]="avion.capacidad"
+             name="capacidad"
+             required
+             min="1"
+             placeholder="Digite la capacidad"
+             #capacidad="ngModel">
+
+    </div>
+
+    <button class="btn btn-success" [disabled]="!avionForm.form.valid">Guardar</button>
+  </form>
+</div>

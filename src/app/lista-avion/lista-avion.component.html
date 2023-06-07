@@ -1,0 +1,25 @@
+<p>lista-avion works!</p>
+<h2>Lista de aviones</h2>
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>ID Avión</th>
+      <th>Nombre Avión</th>
+      <th>Nombre Modelo</th>
+      <th>Capacidad</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let avion of aviones">
+      <td>{{ avion.id_Avion }}</td>
+      <td>{{ avion.nombre_Avion }}</td>
+      <td>{{ avion.nombre_Modelo }}</td>
+      <td>{{ avion.capacidad }}</td>
+      <td>
+        <!-- <button (click)="actualizarAvion(avion.id_Avion)" class="btn btn-info">Editar</button>
+        <button (click)="verDetallesAvion(avion.id_Avion)" class="btn btn-primary" style="margin-left: 10px;">Detalles</button> -->
+      </td>
+    </tr>
+  </tbody>
+</table>
